@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/two_nav"
+    app:startDestination="@id/twoFragment">
+
+    <fragment
+        android:id="@+id/twoFragment"
+        android:name="ru.script.featuretwo.presentation.fragments.TwoFragment"
+        android:label="two_fragment"
+        tools:layout="@layout/two_fragment" />
+</navigation>

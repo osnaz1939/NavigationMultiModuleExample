@@ -1,0 +1,12 @@
+include ':base_interfaces'
+include ':base'
+include ':featuretwo'
+include ':featureone'
+include ':cache_featureone'
+include ':data_entetyone'
+include ':common_delegateadapter'
+include ':base_functions'
+include ':base_navigation'
+include ':base'
+include ':app'
+rootProject.name = "NavigationMultiModuleExample"

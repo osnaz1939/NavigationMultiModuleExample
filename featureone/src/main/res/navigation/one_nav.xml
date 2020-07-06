@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/one_nav"
+    app:startDestination="@id/oneFragment">
+
+    <fragment
+        android:id="@+id/oneFragment"
+        android:name="ru.script.featureone.presentation.fragments.one.OneFragment"
+        android:label="one_fragment"
+        tools:layout="@layout/one_fragment" >
+        <action
+            android:id="@+id/action_oneFragment_to_someFragment"
+            app:destination="@id/someFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/someFragment"
+        android:name="ru.script.featureone.presentation.fragments.some.SomeFragment"
+        android:label="some_fragment"
+        tools:layout="@layout/some_fragment" />
+</navigation>
