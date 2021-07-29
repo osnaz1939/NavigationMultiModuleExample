@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.two_fragment.*
+import ru.script.base_navigation.NavDest
+import ru.script.base_navigation.NavState
 import ru.script.base_navigation.NavigationState
 import ru.script.featuretwo.R
 
@@ -35,6 +37,7 @@ class TwoFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         buttonTwo.setOnClickListener {
+            NavState.setNavigations(NavDest.TWO,NavDest.OLD)
             activity?.finish()
         }
     }

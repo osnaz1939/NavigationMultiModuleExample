@@ -19,4 +19,12 @@
         android:name="ru.script.featureone.presentation.fragments.some.SomeFragment"
         android:label="some_fragment"
         tools:layout="@layout/some_fragment" />
+
+    <action
+        android:id="@id/oneFragment"
+        app:destination="@id/oneFragment" />
+
+    <action
+        android:id="@id/someFragment"
+        app:destination="@id/someFragment" />
 </navigation>

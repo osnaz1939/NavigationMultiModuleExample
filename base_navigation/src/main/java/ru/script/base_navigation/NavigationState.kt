@@ -14,5 +14,7 @@ class NavigationState {
         fun putNavState(iv: String,context:Context?) {
             PreferenceManager.getDefaultSharedPreferences(context).edit().putString("nav", iv).apply()
         }
+
+
     }
 }

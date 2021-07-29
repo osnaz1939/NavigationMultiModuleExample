@@ -10,6 +10,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import ru.script.base_navigation.NavDest
+import ru.script.base_navigation.NavState.Companion.getOldDest
+import ru.script.base_navigation.NavState.Companion.getTargetDest
 import ru.script.base_navigation.NavigationState.Companion.getNavState
 import ru.script.navigationmultimoduleexample.R
 
@@ -38,10 +41,16 @@ class NavFragment : Fragment() {
     override fun onResume() {
         super.onResume()
 
+        var navigation = getTargetDest()
+        if(navigation == NavDest.OLD){
+            navigation = getOldDest()
+        }
+
         //TODO change to request on navigation vm
-        when(getNavState(context)){
-            "0","1"->onetNavigation()
-            "2"->twoNavigation()
+        when(navigation){
+            NavDest.ONE,NavDest.BASE->onetNavigation()
+            NavDest.TWO->twoNavigation()
+            else ->onetNavigation()
         }
     }
 
