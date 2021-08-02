@@ -2,10 +2,11 @@ package ru.script.cache_featureone
 
 import android.content.Context
 import android.preference.PreferenceManager
+import java.util.*
 
 class FeatureOneCachedData {
     companion object{
-        fun getCache(context: Context?):String?{
+        fun getCache(context: Context?): String? {
             return PreferenceManager.getDefaultSharedPreferences(context).getString("cache","0")
         }
 

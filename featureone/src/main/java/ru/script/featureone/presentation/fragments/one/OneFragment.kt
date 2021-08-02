@@ -76,7 +76,7 @@ class OneFragment : Fragment() {
 
     override fun onResume() {
         super.onResume()
-        NavigationState.putNavState("2", context)
+//        NavigationState.putNavState("2", context)
     }
 
 }
